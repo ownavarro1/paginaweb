@@ -97,7 +97,7 @@ a { color: inherit; }
 
 /* BARRA INFERIOR (Azul) */
 .navbar__bottom {
-  background: var(--azul);
+  background: var(--blanco);
 }
 .navbar__bottom-inner {
   display: flex;
@@ -218,7 +218,7 @@ a { color: inherit; }
 }
 .navbar__nav a {
   font-size: .9rem;
-  color: #fff;
+  color: #0A66D1;
   text-decoration: none;
   padding: 1rem 1.25rem;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ a { color: inherit; }
 }
 .navbar__nav a:hover,
 .navbar__nav a[aria-current="page"] {
-  color: #fff;
+  color: #0A66D1;
   border-bottom-color: var(--accent);
   background: rgba(255,209,102,.08);
 }
