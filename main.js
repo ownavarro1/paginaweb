@@ -219,12 +219,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const url = `https://wa.me/573106764906?text=${encodeURIComponent(texto)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
 
-      mostrarToast('Redirigiendo a WhatsApp… 🟢');
+      // Mensaje de éxito visible — WCAG 4.1.3
+      const exito = document.getElementById('form-exito');
+      if (exito) {
+        exito.removeAttribute('hidden');
+        exito.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        exito.focus();
+      }
+
       form.reset();
       Object.keys(campos).forEach(id => {
         const g = document.getElementById('grupo-' + id);
         if (g) g.classList.remove('error');
       });
+
+      // Ocultar mensaje de éxito tras 8 segundos
+      setTimeout(() => { if (exito) exito.setAttribute('hidden', ''); }, 8000);
     });
   }
 
