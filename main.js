@@ -5,6 +5,97 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* =============================================
+     BARRA DE ACCESIBILIDAD — WCAG 1.4.4 / 1.4.3
+     ============================================= */
+
+  const html = document.documentElement;
+
+  // --- Tamaño de texto ---
+  const fontBtns = {
+    normal:  document.getElementById('font-normal'),
+    mediano: document.getElementById('font-mediano'),
+    grande:  document.getElementById('font-grande'),
+  };
+
+  function setFont(size) {
+    html.dataset.font = size === 'normal' ? '' : size;
+    if (size === 'normal') delete html.dataset.font;
+    localStorage.setItem('jo-font', size);
+    Object.keys(fontBtns).forEach(k => {
+      if (fontBtns[k]) fontBtns[k].setAttribute('aria-pressed', k === size ? 'true' : 'false');
+    });
+  }
+
+  if (fontBtns.normal)  fontBtns.normal.addEventListener('click',  () => setFont('normal'));
+  if (fontBtns.mediano) fontBtns.mediano.addEventListener('click', () => setFont('mediano'));
+  if (fontBtns.grande)  fontBtns.grande.addEventListener('click',  () => setFont('grande'));
+
+  // --- Modo nocturno ---
+  const btnTema   = document.getElementById('btn-tema');
+  const iconLuna  = btnTema?.querySelector('.icon-luna');
+  const iconSol   = btnTema?.querySelector('.icon-sol');
+
+  function setTema(nocturno) {
+    if (nocturno) {
+      html.dataset.tema = 'nocturno';
+      if (iconLuna) iconLuna.style.display = 'none';
+      if (iconSol)  iconSol.style.display  = '';
+      if (btnTema)  { btnTema.setAttribute('aria-pressed','true'); btnTema.setAttribute('aria-label','Desactivar modo nocturno'); }
+    } else {
+      delete html.dataset.tema;
+      if (iconLuna) iconLuna.style.display = '';
+      if (iconSol)  iconSol.style.display  = 'none';
+      if (btnTema)  { btnTema.setAttribute('aria-pressed','false'); btnTema.setAttribute('aria-label','Activar modo nocturno'); }
+    }
+    localStorage.setItem('jo-tema', nocturno ? 'nocturno' : 'claro');
+  }
+
+  if (btnTema) btnTema.addEventListener('click', () => setTema(html.dataset.tema !== 'nocturno'));
+
+  // --- Alto contraste ---
+  const btnContraste = document.getElementById('btn-contraste');
+  function setContraste(alto) {
+    if (alto) { html.dataset.contraste = 'alto'; }
+    else { delete html.dataset.contraste; }
+    if (btnContraste) btnContraste.setAttribute('aria-pressed', alto ? 'true' : 'false');
+    localStorage.setItem('jo-contraste', alto ? 'alto' : '');
+  }
+  if (btnContraste) btnContraste.addEventListener('click', () => setContraste(html.dataset.contraste !== 'alto'));
+
+  // --- Subrayar enlaces ---
+  const btnEnlaces = document.getElementById('btn-enlaces');
+  function setEnlaces(sub) {
+    if (sub) { html.dataset.enlaces = 'subrayados'; }
+    else { delete html.dataset.enlaces; }
+    if (btnEnlaces) btnEnlaces.setAttribute('aria-pressed', sub ? 'true' : 'false');
+    localStorage.setItem('jo-enlaces', sub ? 'subrayados' : '');
+  }
+  if (btnEnlaces) btnEnlaces.addEventListener('click', () => setEnlaces(html.dataset.enlaces !== 'subrayados'));
+
+  // --- Restablecer ---
+  const btnReset = document.getElementById('btn-reset-acc');
+  if (btnReset) btnReset.addEventListener('click', () => {
+    setFont('normal');
+    setTema(false);
+    setContraste(false);
+    setEnlaces(false);
+    ['jo-font','jo-tema','jo-contraste','jo-enlaces'].forEach(k => localStorage.removeItem(k));
+  });
+
+  // --- Restaurar preferencias guardadas ---
+  const savedFont      = localStorage.getItem('jo-font');
+  const savedTema      = localStorage.getItem('jo-tema');
+  const savedContraste = localStorage.getItem('jo-contraste');
+  const savedEnlaces   = localStorage.getItem('jo-enlaces');
+  if (savedFont)      setFont(savedFont);
+  if (savedTema === 'nocturno') setTema(true);
+  if (savedContraste === 'alto') setContraste(true);
+  if (savedEnlaces === 'subrayados') setEnlaces(true);
+
+  // Detectar preferencia del sistema operativo (modo oscuro)
+  if (!savedTema && window.matchMedia('(prefers-color-scheme: dark)').matches) setTema(true);
+
   /* --- Menú hamburguesa --- */
   const toggle = document.getElementById('menu-toggle');
   const menuMovil = document.getElementById('menu-movil');
@@ -65,23 +156,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-contacto');
   if (form) {
     const campos = {
-      nombre: { min: 2, msg: 'Por favor ingresa tu nombre (mínimo 2 caracteres).' },
-      email:  { pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, msg: 'Ingresa un correo electrónico válido.' },
-      asunto: { min: 1, msg: 'Selecciona el asunto de tu consulta.' },
-      mensaje:{ min: 10, msg: 'El mensaje debe tener al menos 10 caracteres.' },
+      nombre:   { min: 2, msg: 'Por favor ingresa tu nombre (mínimo 2 caracteres).' },
+      email:    { pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, msg: 'Ingresa un correo electrónico válido.' },
+      asunto:   { min: 1, msg: 'Selecciona el asunto de tu consulta.' },
+      mensaje:  { min: 10, msg: 'El mensaje debe tener al menos 10 caracteres.' },
+      politica: { check: true, msg: 'Debes aceptar la política de privacidad para continuar.' },
     };
 
     function validarCampo(id) {
       const grupo = document.getElementById('grupo-' + id);
-      const input = document.getElementById(id);
+      const input = document.getElementById(id === 'politica' ? 'acepta-politica' : id);
       const regla = campos[id];
       if (!grupo || !input) return true;
 
       let valido = true;
-      const val = input.value.trim();
-
-      if (regla.min !== undefined) valido = val.length >= regla.min;
-      if (regla.pattern) valido = regla.pattern.test(val);
+      if (regla.check) {
+        valido = input.checked;
+      } else {
+        const val = input.value.trim();
+        if (regla.min !== undefined) valido = val.length >= regla.min;
+        if (regla.pattern) valido = regla.pattern.test(val);
+      }
 
       grupo.classList.toggle('error', !valido);
       input.setAttribute('aria-invalid', !valido);
@@ -90,14 +185,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Validación en tiempo real al salir del campo
     Object.keys(campos).forEach(id => {
-      const input = document.getElementById(id);
+      const elId = id === 'politica' ? 'acepta-politica' : id;
+      const input = document.getElementById(elId);
       if (input) {
-        input.addEventListener('blur', () => validarCampo(id));
-        input.addEventListener('input', () => {
-          if (document.getElementById('grupo-' + id).classList.contains('error')) {
-            validarCampo(id);
-          }
-        });
+        const evento = campos[id].check ? 'change' : 'blur';
+        input.addEventListener(evento, () => validarCampo(id));
+        if (!campos[id].check) {
+          input.addEventListener('input', () => {
+            if (document.getElementById('grupo-' + id)?.classList.contains('error')) validarCampo(id);
+          });
+        }
       }
     });
 

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Política de privacidad y tratamiento de datos personales de J&O Suministros. Conforme a la Ley 1581 de 2012 y el Decreto 1377 de 2013." />
+  <title>Política de Privacidad — J&O Suministros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231A3A6E'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='11' fill='white'>J&amp;O</text></svg>" />
+  <style>
+    .politica {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    .politica__encabezado {
+      background: linear-gradient(135deg, #0d2045 0%, #1A3A6E 100%);
+      border-radius: var(--radio-lg);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2.5rem;
+      color: #fff;
+    }
+    .politica__encabezado .badge-doc {
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      background: rgba(255,255,255,.15);
+      color: rgba(255,255,255,.9);
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .3rem .875rem;
+      border-radius: 99px;
+      margin-bottom: 1rem;
+    }
+    .politica__encabezado h1 {
+      font-size: clamp(1.375rem, 4vw, 1.875rem);
+      font-weight: 700;
+      margin-bottom: .625rem;
+      line-height: 1.25;
+    }
+    .politica__encabezado p {
+      font-size: .9375rem;
+      color: rgba(255,255,255,.75);
+      line-height: 1.7;
+    }
+    .politica__meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255,255,255,.15);
+    }
+    .politica__meta-item { font-size: .8125rem; color: rgba(255,255,255,.65); }
+    .politica__meta-item strong { color: rgba(255,255,255,.9); display: block; margin-bottom: .2rem; }
+
+    .politica__nav {
+      background: var(--gris-bg);
+      border: 1px solid var(--gris-borde);
+      border-radius: var(--radio-lg);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .politica__nav h2 {
+      font-size: .875rem;
+      font-weight: 700;
+      color: var(--texto-sec);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: .875rem;
+    }
+    .politica__nav ol {
+      list-style: decimal;
+      padding-left: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: .35rem .5rem;
+    }
+    .politica__nav a {
+      font-size: .875rem;
+      color: var(--azul);
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .politica__nav a:hover { text-decoration: underline; }
+
+    .politica__seccion {
+      margin-bottom: 2.5rem;
+      scroll-margin-top: 5rem;
+    }
+    .politica__seccion h2 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--texto);
+      margin-bottom: .875rem;
+      padding-bottom: .625rem;
+      border-bottom: 2px solid var(--azul-claro);
+      display: flex;
+      align-items: center;
+      gap: .625rem;
+    }
+    .politica__seccion h2 .sec-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--azul);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .politica__seccion p {
+      font-size: .9375rem;
+      color: var(--texto-sec);
+      line-height: 1.8;
+      margin-bottom: .875rem;
+    }
+    .politica__seccion p:last-child { margin-bottom: 0; }
+    .politica__seccion ul, .politica__seccion ol {
+      padding-left: 1.5rem;
+      margin-bottom: .875rem;
+    }
+    .politica__seccion li {
+      font-size: .9375rem;
+      color: var(--texto-sec);
+      line-height: 1.75;
+      margin-bottom: .35rem;
+    }
+    .politica__seccion strong { color: var(--texto); }
+
+    .politica__tabla {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: .875rem;
+    }
+    .politica__tabla th {
+      background: var(--azul);
+      color: #fff;
+      padding: .625rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .politica__tabla td {
+      padding: .625rem 1rem;
+      border-bottom: 1px solid var(--gris-borde);
+      color: var(--texto-sec);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .politica__tabla tr:nth-child(even) td { background: var(--gris-bg); }
+
+    .politica__alerta {
+      background: var(--azul-claro);
+      border-left: 4px solid var(--azul);
+      border-radius: 0 var(--radio) var(--radio) 0;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      font-size: .9rem;
+      color: var(--azul-texto);
+      line-height: 1.65;
+    }
+    .politica__alerta strong { color: var(--azul); }
+
+    .politica__footer-doc {
+      background: var(--gris-bg);
+      border: 1px solid var(--gris-borde);
+      border-radius: var(--radio-lg);
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .politica__footer-doc p { font-size: .875rem; color: var(--texto-sec); margin-bottom: .5rem; }
+    .politica__footer-doc strong { color: var(--texto); }
+
+    /* Modo nocturno */
+    html[data-tema="nocturno"] .politica__nav { background: #1a2035; border-color: #2d3550; }
+    html[data-tema="nocturno"] .politica__seccion h2 { border-bottom-color: #1a2d4d; }
+    html[data-tema="nocturno"] .politica__tabla tr:nth-child(even) td { background: #1a2035; }
+    html[data-tema="nocturno"] .politica__alerta { background: #1a2d4d; color: #7eb8f7; }
+    html[data-tema="nocturno"] .politica__footer-doc { background: #1a2035; border-color: #2d3550; }
+
+    @media (max-width: 600px) {
+      .politica__encabezado { padding: 1.5rem 1.25rem; }
+      .politica__tabla { font-size: .8125rem; }
+      .politica__tabla th, .politica__tabla td { padding: .5rem .75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido-politica">Saltar al contenido principal</a>
+
+  <!-- Barra accesibilidad -->
+  <div class="acc-bar" role="toolbar" aria-label="Opciones de accesibilidad">
+    <div class="acc-bar__inner contenedor">
+      <span class="acc-bar__label" aria-hidden="true">Accesibilidad:</span>
+      <div class="acc-bar__grupo" role="group" aria-label="Tamaño de texto">
+        <button class="acc-btn" id="font-normal" aria-pressed="true" aria-label="Texto normal">A</button>
+        <button class="acc-btn acc-btn--md" id="font-mediano" aria-pressed="false" aria-label="Texto mediano">A</button>
+        <button class="acc-btn acc-btn--lg" id="font-grande" aria-pressed="false" aria-label="Texto grande">A</button>
+      </div>
+      <div class="acc-bar__sep" aria-hidden="true"></div>
+      <button class="acc-btn acc-btn--icon" id="btn-tema" aria-pressed="false" aria-label="Activar modo nocturno">
+        <svg class="icon-luna" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-sol" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+        <span class="acc-btn__texto">Nocturno</span>
+      </button>
+      <div class="acc-bar__sep" aria-hidden="true"></div>
+      <button class="acc-btn acc-btn--reset" id="btn-reset-acc" aria-label="Restablecer accesibilidad">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        <span class="acc-btn__texto">Restablecer</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navbar mínimo — solo logo -->
+  <header role="banner">
+    <nav class="navbar" aria-label="Navegación">
+      <div class="navbar__inner contenedor" style="justify-content:center">
+        <a href="index.html" class="navbar__logo" aria-label="J&O Suministros — Volver al inicio">
+          <div class="navbar__logo-box" aria-hidden="true">J&amp;O</div>
+          <div class="navbar__logo-texto">
+            <span class="navbar__logo-nombre">J&amp;O Suministros</span>
+            <span class="navbar__logo-ciudad">Montería · Córdoba</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido-politica">
+    <div class="politica contenedor">
+
+      <!-- Botón volver centrado -->
+      <div style="text-align:center;margin-bottom:1.75rem">
+        <a href="index.html" class="btn btn--primario" style="display:inline-flex">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><polyline points="15 18 9 12 15 6"/></svg>
+          Volver al sitio principal
+        </a>
+      </div>
+
+      <!-- Encabezado del documento -->
+      <div class="politica__encabezado" role="banner">
+        <div class="badge-doc" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="13" height="13"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Documento legal
+        </div>
+        <h1>Política de Privacidad y Tratamiento de Datos Personales</h1>
+        <p>J&amp;O Suministros se compromete a proteger la privacidad y los datos personales de sus usuarios, clientes y aliados, en cumplimiento de la normativa colombiana vigente.</p>
+        <div class="politica__meta">
+          <div class="politica__meta-item"><strong>Empresa</strong>J&amp;O Suministros</div>
+          <div class="politica__meta-item"><strong>NIT</strong>1067842605-3</div>
+          <div class="politica__meta-item"><strong>Régimen</strong>Simplificado</div>
+          <div class="politica__meta-item"><strong>Vigencia</strong>Desde enero de 2025</div>
+          <div class="politica__meta-item"><strong>Normativa</strong>Ley 1581 de 2012 · Decreto 1377 de 2013</div>
+        </div>
+      </div>
+
+      <!-- Tabla de contenido -->
+      <nav class="politica__nav" aria-label="Tabla de contenido">
+        <h2>Contenido</h2>
+        <ol>
+          <li><a href="#responsable">Responsable del tratamiento</a></li>
+          <li><a href="#datos">Datos que recopilamos</a></li>
+          <li><a href="#finalidad">Finalidad del tratamiento</a></li>
+          <li><a href="#base-legal">Base legal</a></li>
+          <li><a href="#derechos">Derechos del titular</a></li>
+          <li><a href="#transferencia">Transferencia y transmisión</a></li>
+          <li><a href="#seguridad">Medidas de seguridad</a></li>
+          <li><a href="#conservacion">Tiempo de conservación</a></li>
+          <li><a href="#cookies">Cookies y tecnologías similares</a></li>
+          <li><a href="#menores">Menores de edad</a></li>
+          <li><a href="#actualizaciones">Actualizaciones</a></li>
+          <li><a href="#contacto-politica">Contacto y PQRSD</a></li>
+        </ol>
+      </nav>
+
+      <!-- 1. Responsable -->
+      <section class="politica__seccion" id="responsable" aria-labelledby="titulo-1">
+        <h2 id="titulo-1"><span class="sec-num" aria-hidden="true">1</span>Responsable del Tratamiento</h2>
+        <table class="politica__tabla" aria-label="Datos del responsable del tratamiento">
+          <thead><tr><th>Campo</th><th>Información</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Razón social</strong></td><td>J&amp;O Suministros</td></tr>
+            <tr><td><strong>Representante legal</strong></td><td>Oscar William Navarro Guerrero</td></tr>
+            <tr><td><strong>NIT</strong></td><td>1067842605-3</td></tr>
+            <tr><td><strong>Régimen tributario</strong></td><td>Régimen Simplificado</td></tr>
+            <tr><td><strong>Dirección</strong></td><td>Calle 12 # 18-10, Rosales de Tacasuan, Montería, Córdoba</td></tr>
+            <tr><td><strong>Correo electrónico</strong></td><td>josuministrosmonteria@gmail.com</td></tr>
+            <tr><td><strong>Teléfonos</strong></td><td>310 676 4906 · 321 537 1204 · 312 660 7576</td></tr>
+            <tr><td><strong>Sitio web</strong></td><td>josuministros.com.co</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 2. Datos -->
+      <section class="politica__seccion" id="datos" aria-labelledby="titulo-2">
+        <h2 id="titulo-2"><span class="sec-num" aria-hidden="true">2</span>Datos Personales que Recopilamos</h2>
+        <p>Recopilamos únicamente los datos necesarios para prestar nuestros servicios. Dependiendo del canal de contacto, podemos recopilar:</p>
+        <ul>
+          <li><strong>Datos de identificación:</strong> nombre completo.</li>
+          <li><strong>Datos de contacto:</strong> correo electrónico, número de teléfono o WhatsApp.</li>
+          <li><strong>Datos de la organización:</strong> nombre de la empresa o institución, cargo (cuando aplique).</li>
+          <li><strong>Datos de la consulta:</strong> asunto, mensaje, tipo de productos de interés.</li>
+          <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, páginas visitadas (solo si se implementan herramientas de análisis).</li>
+        </ul>
+        <div class="politica__alerta" role="note">
+          <strong>Importante:</strong> J&amp;O Suministros <strong>no recopila</strong> datos sensibles como origen racial o étnico, orientación sexual, información de salud, datos biométricos ni afiliación política o religiosa.
+        </div>
+      </section>
+
+      <!-- 3. Finalidad -->
+      <section class="politica__seccion" id="finalidad" aria-labelledby="titulo-3">
+        <h2 id="titulo-3"><span class="sec-num" aria-hidden="true">3</span>Finalidad del Tratamiento</h2>
+        <p>Los datos personales recopilados serán utilizados exclusivamente para las siguientes finalidades:</p>
+        <ul>
+          <li>Responder consultas, solicitudes de cotización y mensajes enviados a través del formulario de contacto o WhatsApp.</li>
+          <li>Gestionar relaciones comerciales con clientes y aliados.</li>
+          <li>Enviar información sobre productos, servicios y promociones de J&amp;O Suministros (solo con consentimiento previo).</li>
+          <li>Cumplir obligaciones legales, contables y tributarias vigentes en Colombia.</li>
+          <li>Mejorar la experiencia del usuario en el sitio web.</li>
+          <li>Atender solicitudes de ejercicio de derechos (acceso, corrección, supresión, etc.).</li>
+        </ul>
+        <p><strong>No utilizaremos sus datos para fines distintos a los aquí descritos</strong> sin obtener previamente su consentimiento expreso.</p>
+      </section>
+
+      <!-- 4. Base legal -->
+      <section class="politica__seccion" id="base-legal" aria-labelledby="titulo-4">
+        <h2 id="titulo-4"><span class="sec-num" aria-hidden="true">4</span>Base Legal del Tratamiento</h2>
+        <p>El tratamiento de datos personales por parte de J&amp;O Suministros se fundamenta en:</p>
+        <ul>
+          <li><strong>Ley 1581 de 2012</strong> — Ley Estatutaria de Protección de Datos Personales de Colombia.</li>
+          <li><strong>Decreto 1377 de 2013</strong> — Por el cual se reglamenta parcialmente la Ley 1581 de 2012.</li>
+          <li><strong>Decreto Único Reglamentario 1074 de 2015</strong> — Sector Comercio, Industria y Turismo.</li>
+          <li><strong>Consentimiento del titular</strong> — manifestado al diligenciar el formulario de contacto y marcar la casilla de aceptación.</li>
+          <li><strong>Ejecución de una relación contractual o precontractual</strong> — cuando aplica en relaciones comerciales.</li>
+        </ul>
+      </section>
+
+      <!-- 5. Derechos -->
+      <section class="politica__seccion" id="derechos" aria-labelledby="titulo-5">
+        <h2 id="titulo-5"><span class="sec-num" aria-hidden="true">5</span>Derechos del Titular de los Datos</h2>
+        <p>En cumplimiento del artículo 8 de la Ley 1581 de 2012, como titular de sus datos personales usted tiene derecho a:</p>
+        <ul>
+          <li><strong>Conocer, actualizar y rectificar</strong> sus datos personales.</li>
+          <li><strong>Solicitar prueba del consentimiento</strong> otorgado para el tratamiento.</li>
+          <li><strong>Ser informado</strong> sobre el uso que se ha dado a sus datos personales.</li>
+          <li><strong>Presentar quejas</strong> ante la Superintendencia de Industria y Comercio (SIC) por infracciones a la ley.</li>
+          <li><strong>Revocar el consentimiento</strong> y solicitar la supresión de sus datos, siempre que no exista un deber legal o contractual de conservarlos.</li>
+          <li><strong>Acceder gratuitamente</strong> a sus datos personales que hayan sido objeto de tratamiento.</li>
+        </ul>
+        <p>Para ejercer cualquiera de estos derechos, puede contactarnos a través de los canales indicados en la sección 12 de este documento. Daremos respuesta en un término máximo de <strong>10 días hábiles</strong> para consultas y <strong>15 días hábiles</strong> para reclamos, conforme a la ley.</p>
+      </section>
+
+      <!-- 6. Transferencia -->
+      <section class="politica__seccion" id="transferencia" aria-labelledby="titulo-6">
+        <h2 id="titulo-6"><span class="sec-num" aria-hidden="true">6</span>Transferencia y Transmisión de Datos</h2>
+        <p>J&amp;O Suministros <strong>no vende, alquila ni comercializa</strong> los datos personales de sus usuarios a terceros.</p>
+        <p>Podremos compartir datos únicamente en los siguientes casos excepcionales:</p>
+        <ul>
+          <li>Cuando exista una obligación legal o una orden de autoridad competente.</li>
+          <li>Con proveedores de servicios tecnológicos (como servicios de correo o alojamiento web) que actúen como encargados del tratamiento, bajo acuerdos de confidencialidad y con las mismas garantías de protección.</li>
+          <li>Con el consentimiento expreso del titular.</li>
+        </ul>
+        <div class="politica__alerta" role="note">
+          El uso del formulario de contacto de este sitio redirige el mensaje a <strong>WhatsApp</strong> (Meta Platforms, Inc.). Al enviar el formulario, acepta también las condiciones de uso de WhatsApp Business. El procesamiento de esa comunicación está sujeto a las políticas de privacidad de Meta.
+        </div>
+      </section>
+
+      <!-- 7. Seguridad -->
+      <section class="politica__seccion" id="seguridad" aria-labelledby="titulo-7">
+        <h2 id="titulo-7"><span class="sec-num" aria-hidden="true">7</span>Medidas de Seguridad</h2>
+        <p>J&amp;O Suministros adopta las medidas técnicas, humanas y administrativas necesarias para proteger los datos personales y evitar su adulteración, pérdida, consulta, uso o acceso no autorizado:</p>
+        <ul>
+          <li>Cifrado HTTPS en el sitio web mediante certificado SSL.</li>
+          <li>Acceso restringido a la información únicamente al responsable del tratamiento.</li>
+          <li>No almacenamiento de contraseñas ni datos financieros en el sitio.</li>
+          <li>Uso de canales de comunicación seguros (correo y WhatsApp Business).</li>
+        </ul>
+        <p>Sin embargo, ningún sistema de transmisión de datos por internet es 100% seguro. En caso de incidente de seguridad que afecte sus datos, le notificaremos en el menor tiempo posible conforme a la normativa aplicable.</p>
+      </section>
+
+      <!-- 8. Conservación -->
+      <section class="politica__seccion" id="conservacion" aria-labelledby="titulo-8">
+        <h2 id="titulo-8"><span class="sec-num" aria-hidden="true">8</span>Tiempo de Conservación</h2>
+        <p>Los datos personales serán conservados durante el tiempo necesario para cumplir las finalidades descritas en esta política, y en todo caso por el tiempo que exijan las obligaciones legales, contables o tributarias aplicables en Colombia.</p>
+        <ul>
+          <li><strong>Datos de contacto y consultas:</strong> hasta 2 años desde el último contacto, salvo que se haya formalizado una relación comercial.</li>
+          <li><strong>Datos de relaciones comerciales:</strong> hasta 10 años, conforme al Código de Comercio.</li>
+          <li><strong>Datos de consentimiento:</strong> conservados indefinidamente como prueba del mismo.</li>
+        </ul>
+        <p>Transcurrido el plazo, los datos serán eliminados de forma segura o anonimizados.</p>
+      </section>
+
+      <!-- 9. Cookies -->
+      <section class="politica__seccion" id="cookies" aria-labelledby="titulo-9">
+        <h2 id="titulo-9"><span class="sec-num" aria-hidden="true">9</span>Cookies y Tecnologías Similares</h2>
+        <p>El sitio web de J&amp;O Suministros puede utilizar <strong>localStorage</strong> del navegador para guardar únicamente sus preferencias de accesibilidad (tamaño de texto, modo nocturno, contraste). Esta información no identifica al usuario, no se transmite a terceros y puede ser eliminada borrando los datos del sitio desde la configuración de su navegador.</p>
+        <p>Actualmente <strong>no utilizamos cookies de rastreo, publicidad o analítica de terceros</strong>. Si en el futuro se implementaran, esta política será actualizada y se solicitará su consentimiento expreso.</p>
+      </section>
+
+      <!-- 10. Menores -->
+      <section class="politica__seccion" id="menores" aria-labelledby="titulo-10">
+        <h2 id="titulo-10"><span class="sec-num" aria-hidden="true">10</span>Menores de Edad</h2>
+        <p>Los servicios de J&amp;O Suministros están dirigidos exclusivamente a personas mayores de 18 años y a representantes legales de organizaciones. <strong>No recopilamos ni tratamos intencionalmente datos personales de menores de edad.</strong></p>
+        <p>Si usted tiene conocimiento de que un menor ha proporcionado datos personales a través de nuestros canales, le pedimos nos lo comunique de inmediato para proceder a su eliminación.</p>
+      </section>
+
+      <!-- 11. Actualizaciones -->
+      <section class="politica__seccion" id="actualizaciones" aria-labelledby="titulo-11">
+        <h2 id="titulo-11"><span class="sec-num" aria-hidden="true">11</span>Actualizaciones de esta Política</h2>
+        <p>J&amp;O Suministros se reserva el derecho de actualizar esta Política de Privacidad en cualquier momento para reflejar cambios legales, tecnológicos o en la operación del negocio.</p>
+        <p>Las modificaciones serán publicadas en este sitio web con la nueva fecha de vigencia. Le recomendamos revisar periódicamente esta página. El uso continuado del sitio tras la publicación de cambios implica la aceptación de la política actualizada.</p>
+      </section>
+
+      <!-- 12. Contacto -->
+      <section class="politica__seccion" id="contacto-politica" aria-labelledby="titulo-12">
+        <h2 id="titulo-12"><span class="sec-num" aria-hidden="true">12</span>Contacto y PQRSD</h2>
+        <p>Para ejercer sus derechos, presentar peticiones, quejas, reclamos, sugerencias o denuncias (PQRSD) relacionadas con el tratamiento de sus datos personales, puede contactarnos por cualquiera de los siguientes canales:</p>
+        <ul>
+          <li><strong>Correo electrónico:</strong> <a href="mailto:josuministrosmonteria@gmail.com">josuministrosmonteria@gmail.com</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/573106764906" target="_blank" rel="noopener noreferrer">310 676 4906</a></li>
+          <li><strong>Dirección física:</strong> Calle 12 # 18-10, Rosales de Tacasuan, Montería, Córdoba</li>
+          <li><strong>Horario de atención:</strong> lunes a sábado, 8:00 am – 6:00 pm</li>
+        </ul>
+        <p>Si considera que su solicitud no fue atendida satisfactoriamente, puede acudir ante la <strong>Superintendencia de Industria y Comercio (SIC)</strong>, entidad encargada de velar por el cumplimiento de la Ley 1581 de 2012 en Colombia.</p>
+        <p>Sitio web SIC: <a href="https://www.sic.gov.co" target="_blank" rel="noopener noreferrer">www.sic.gov.co</a></p>
+      </section>
+
+      <!-- Footer del documento -->
+      <div class="politica__footer-doc" role="contentinfo">
+        <p><strong>J&amp;O Suministros — Oscar William Navarro Guerrero</strong></p>
+        <p>NIT 1067842605-3 · Montería, Córdoba, Colombia</p>
+        <p style="margin-top:.75rem">
+          <a href="index.html" class="btn btn--primario" style="display:inline-flex">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><polyline points="15 18 9 12 15 6"/></svg>
+            Volver al sitio principal
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

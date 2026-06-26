@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="J&O Suministros — Proveedor institucional de papelería, tecnología, aseo, cafetería y mantenimiento en Montería, Córdoba. Cotiza por WhatsApp." />
+  <meta name="description" content="J&O Suministros — Papelería, tecnología, aseo, cafetería, mobiliario, botiquín, ferretería, consumibles de impresión y mantenimiento para empresas en Montería." />
   <meta name="theme-color" content="#1A3A6E" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="J&O Suministros — Montería" />
-  <meta property="og:description" content="Tu aliado en papelería, tecnología, aseo y cafetería para empresas e instituciones en Córdoba." />
+  <meta property="og:description" content="Tu aliado en papelería, tecnología, aseo, cafetería, mobiliario, botiquín, ferretería, consumibles de impresión y mantenimiento para empresas e instituciones en Córdoba." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://josuministros.com.co" />
 
-  <title>J&O Suministros | Papelería, Tecnología y Aseo en Montería</title>
+  <title>J&O Suministros | Papelería, Tecnología, Cafetería y Más</title>
 
   <!-- Fuente -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +28,59 @@
 
   <!-- ========== SKIP LINK (WCAG 2.4.1) ========== -->
   <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- ========== BARRA DE ACCESIBILIDAD (WCAG 1.4.4, 1.4.3) ========== -->
+  <div class="acc-bar" role="toolbar" aria-label="Opciones de accesibilidad">
+    <div class="acc-bar__inner contenedor">
+      <span class="acc-bar__label" id="acc-label">Accesibilidad:</span>
+
+      <!-- Tamaño de letra -->
+      <div class="acc-bar__grupo" role="group" aria-labelledby="acc-font-label">
+        <span class="acc-bar__grupo-label" id="acc-font-label">Texto</span>
+        <button class="acc-btn" id="font-normal" aria-pressed="true" aria-label="Tamaño de texto normal" title="Texto normal">A</button>
+        <button class="acc-btn acc-btn--md" id="font-mediano" aria-pressed="false" aria-label="Tamaño de texto mediano" title="Texto mediano">A</button>
+        <button class="acc-btn acc-btn--lg" id="font-grande" aria-pressed="false" aria-label="Tamaño de texto grande" title="Texto grande">A</button>
+      </div>
+
+      <div class="acc-bar__sep" aria-hidden="true"></div>
+
+      <!-- Modo nocturno -->
+      <div class="acc-bar__grupo" role="group" aria-labelledby="acc-tema-label">
+        <span class="acc-bar__grupo-label" id="acc-tema-label">Tema</span>
+        <button class="acc-btn acc-btn--icon" id="btn-tema" aria-pressed="false" aria-label="Activar modo nocturno" title="Modo nocturno">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="icon-luna"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="icon-sol" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="acc-btn__texto">Nocturno</span>
+        </button>
+      </div>
+
+      <div class="acc-bar__sep" aria-hidden="true"></div>
+
+      <!-- Alto contraste -->
+      <div class="acc-bar__grupo" role="group">
+        <button class="acc-btn acc-btn--icon" id="btn-contraste" aria-pressed="false" aria-label="Activar alto contraste" title="Alto contraste">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M12 2a10 10 0 010 20" fill="currentColor"/></svg>
+          <span class="acc-btn__texto">Contraste</span>
+        </button>
+      </div>
+
+      <div class="acc-bar__sep" aria-hidden="true"></div>
+
+      <!-- Subrayar enlaces -->
+      <div class="acc-bar__grupo" role="group">
+        <button class="acc-btn acc-btn--icon" id="btn-enlaces" aria-pressed="false" aria-label="Subrayar todos los enlaces" title="Subrayar enlaces">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          <span class="acc-btn__texto">Enlaces</span>
+        </button>
+      </div>
+
+      <!-- Resetear -->
+      <button class="acc-btn acc-btn--reset" id="btn-reset-acc" aria-label="Restablecer configuración de accesibilidad" title="Restablecer">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        <span class="acc-btn__texto">Restablecer</span>
+      </button>
+    </div>
+  </div>
 
   <!-- ========== NAVBAR ========== -->
   <header role="banner">
@@ -175,7 +228,7 @@
         <div class="carrusel" aria-label="Nuestras líneas de producto" role="region">
           <div class="carrusel__track" id="carrusel-track" aria-live="polite" aria-atomic="true">
 
-            <div class="carrusel__slide" data-color="#1A3A6E" data-bg="#E6F1FB" role="group" aria-label="Diapositiva 1 de 5: Papelería">
+            <div class="carrusel__slide" data-color="#1A3A6E" data-bg="#E6F1FB" role="group" aria-label="Diapositiva 1 de 9: Papelería">
               <div class="carrusel__icono" style="background:#E6F1FB" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#1A3A6E" stroke-width="1.75" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               </div>
@@ -184,7 +237,7 @@
               <a href="#productos" class="carrusel__link">Ver productos →</a>
             </div>
 
-            <div class="carrusel__slide" data-color="#2D6A0F" data-bg="#EAF3DE" role="group" aria-label="Diapositiva 2 de 5: Tecnología">
+            <div class="carrusel__slide" data-color="#2D6A0F" data-bg="#EAF3DE" role="group" aria-label="Diapositiva 2 de 9: Tecnología">
               <div class="carrusel__icono" style="background:#EAF3DE" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#2D6A0F" stroke-width="1.75" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
               </div>
@@ -193,7 +246,7 @@
               <a href="#productos" class="carrusel__link">Ver productos →</a>
             </div>
 
-            <div class="carrusel__slide" data-color="#7C3A00" data-bg="#FAEEDA" role="group" aria-label="Diapositiva 3 de 5: Aseo">
+            <div class="carrusel__slide" data-color="#7C3A00" data-bg="#FAEEDA" role="group" aria-label="Diapositiva 3 de 9: Aseo">
               <div class="carrusel__icono" style="background:#FAEEDA" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#7C3A00" stroke-width="1.75" stroke-linecap="round"><path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-5 0v-15A2.5 2.5 0 019.5 2z"/><path d="M14.5 8A2.5 2.5 0 0117 10.5v9a2.5 2.5 0 01-5 0v-9A2.5 2.5 0 0114.5 8z"/><line x1="2" y1="22" x2="22" y2="22"/></svg>
               </div>
@@ -202,7 +255,7 @@
               <a href="#productos" class="carrusel__link">Ver productos →</a>
             </div>
 
-            <div class="carrusel__slide" data-color="#4A3FB5" data-bg="#EEEDFE" role="group" aria-label="Diapositiva 4 de 5: Cafetería">
+            <div class="carrusel__slide" data-color="#4A3FB5" data-bg="#EEEDFE" role="group" aria-label="Diapositiva 4 de 9: Cafetería">
               <div class="carrusel__icono" style="background:#EEEDFE" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#4A3FB5" stroke-width="1.75" stroke-linecap="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
               </div>
@@ -211,7 +264,43 @@
               <a href="#productos" class="carrusel__link">Ver productos →</a>
             </div>
 
-            <div class="carrusel__slide" data-color="#0A5E47" data-bg="#E1F5EE" role="group" aria-label="Diapositiva 5 de 5: Mantenimiento">
+            <div class="carrusel__slide" data-color="#2B4862" data-bg="#DBEAFB" role="group" aria-label="Diapositiva 5 de 9: Mobiliario">
+              <div class="carrusel__icono" style="background:#DBEAFB" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2B4862" stroke-width="1.75" stroke-linecap="round"><rect x="4" y="6" width="16" height="12" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="7" y1="18" x2="7" y2="22"/><line x1="17" y1="18" x2="17" y2="22"/></svg>
+              </div>
+              <h2 class="carrusel__titulo">Mobiliario</h2>
+              <p class="carrusel__desc">Sillas · Escritorios · Archivadores · Estantes · Pizarras</p>
+              <a href="#productos" class="carrusel__link">Ver productos →</a>
+            </div>
+
+            <div class="carrusel__slide" data-color="#9F5F2A" data-bg="#F7E8D8" role="group" aria-label="Diapositiva 6 de 9: Botiquín">
+              <div class="carrusel__icono" style="background:#F7E8D8" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#9F5F2A" stroke-width="1.75" stroke-linecap="round"><path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/><line x1="12" y1="7" x2="12" y2="17"/><line x1="7" y1="12" x2="17" y2="12"/></svg>
+              </div>
+              <h2 class="carrusel__titulo">Botiquín</h2>
+              <p class="carrusel__desc">Alcohol · Gasas · Vendas · Guantes · Termómetros</p>
+              <a href="#productos" class="carrusel__link">Ver productos →</a>
+            </div>
+
+            <div class="carrusel__slide" data-color="#6B4FAA" data-bg="#EEE9FD" role="group" aria-label="Diapositiva 7 de 9: Ferretería">
+              <div class="carrusel__icono" style="background:#EEE9FD" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#6B4FAA" stroke-width="1.75" stroke-linecap="round"><path d="M4 20h16"/><path d="M6 4l4 4"/><path d="M14 10l4-4"/><path d="M7 7l10 10"/></svg>
+              </div>
+              <h2 class="carrusel__titulo">Ferretería</h2>
+              <p class="carrusel__desc">Clavos · Tornillos · Cerraduras · Cinta métrica · Herramientas básicas</p>
+              <a href="#productos" class="carrusel__link">Ver productos →</a>
+            </div>
+
+            <div class="carrusel__slide" data-color="#0F4D7A" data-bg="#DDE9F4" role="group" aria-label="Diapositiva 8 de 9: Consumibles de impresión">
+              <div class="carrusel__icono" style="background:#DDE9F4" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0F4D7A" stroke-width="1.75" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>
+              </div>
+              <h2 class="carrusel__titulo">Consumibles de impresión</h2>
+              <p class="carrusel__desc">Papel bond · Papel couché · Etiquetas · Cintas · Ribbons</p>
+              <a href="#productos" class="carrusel__link">Ver productos →</a>
+            </div>
+
+            <div class="carrusel__slide" data-color="#0A5E47" data-bg="#E1F5EE" role="group" aria-label="Diapositiva 9 de 9: Mantenimiento">
               <div class="carrusel__icono" style="background:#E1F5EE" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#0A5E47" stroke-width="1.75" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
               </div>
@@ -253,58 +342,166 @@
           <div class="productos__track" id="productos-track">
             <!-- Slide 1: Primeras 3 -->
             <div class="productos__slide" role="group">
-              <article class="producto-card" role="listitem">
-                <div class="producto-card__icono" style="background:#E6F1FB" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="1.75" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <article class="producto-card" role="listitem" aria-labelledby="prod-papeleria">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#1A3A6E,#2a5298)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                 </div>
-                <h3 class="producto-card__nombre">Papelería</h3>
-                <p class="producto-card__items">Resmas de papel · Carpetas AZ · Bolígrafos · Marcadores · Cuadernos · Clips · Sobres manila · Notas adhesivas</p>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#E6F1FB;color:#185FA5">Papelería</span>
+                  <h3 class="producto-card__nombre" id="prod-papeleria">Papelería de oficina</h3>
+                  <ul class="producto-card__lista" aria-label="Productos de papelería">
+                    <li>Resmas de papel y cuadernos</li>
+                    <li>Carpetas AZ y sobres manila</li>
+                    <li>Bolígrafos, marcadores y clips</li>
+                    <li>Notas adhesivas y adhesivos</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
               </article>
 
-              <article class="producto-card" role="listitem">
-                <div class="producto-card__icono" style="background:#EAF3DE" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="1.75" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <article class="producto-card" role="listitem" aria-labelledby="prod-tecnologia">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#2D6A0F,#3d8f18)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                 </div>
-                <h3 class="producto-card__nombre">Tecnología</h3>
-                <p class="producto-card__items">Impresoras · Tóneres · Cartuchos · Memorias USB · Teclados · Mouse · Reguladores de voltaje · Accesorios</p>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#EAF3DE;color:#2D6A0F">Tecnología</span>
+                  <h3 class="producto-card__nombre" id="prod-tecnologia">Tecnología e insumos</h3>
+                  <ul class="producto-card__lista" aria-label="Productos de tecnología">
+                    <li>Impresoras y equipos de cómputo</li>
+                    <li>Tóneres, cartuchos y tintas</li>
+                    <li>Memorias USB y accesorios</li>
+                    <li>Teclados, mouse y reguladores</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
               </article>
 
-              <article class="producto-card" role="listitem">
-                <div class="producto-card__icono" style="background:#FAEEDA" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="1.75" stroke-linecap="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+              <article class="producto-card" role="listitem" aria-labelledby="prod-aseo">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#7C3A00,#a84e00)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-5 0v-15A2.5 2.5 0 019.5 2z"/><path d="M14.5 8A2.5 2.5 0 0117 10.5v9a2.5 2.5 0 01-5 0v-9A2.5 2.5 0 0114.5 8z"/><line x1="2" y1="22" x2="22" y2="22"/></svg>
                 </div>
-                <h3 class="producto-card__nombre">Aseo</h3>
-                <p class="producto-card__items">Desinfectantes · Cloro · Jabón líquido · Varsol · Papel higiénico · Toallas desechables · Escobas · Traperos · Bolsas de basura</p>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#FAEEDA;color:#7C3A00">Aseo</span>
+                  <h3 class="producto-card__nombre" id="prod-aseo">Productos de aseo</h3>
+                  <ul class="producto-card__lista" aria-label="Productos de aseo">
+                    <li>Desinfectantes, cloro y jabón</li>
+                    <li>Papel higiénico y toallas</li>
+                    <li>Escobas, traperos y esponjas</li>
+                    <li>Bolsas de basura y guantes</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
               </article>
             </div>
 
             <!-- Slide 2: Segundas 3 -->
             <div class="productos__slide" role="group">
-              <article class="producto-card" role="listitem">
-                <div class="producto-card__icono" style="background:#EEEDFE" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.75" stroke-linecap="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              <article class="producto-card" role="listitem" aria-labelledby="prod-cafeteria">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#4A3FB5,#6355cc)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
                 </div>
-                <h3 class="producto-card__nombre">Cafetería</h3>
-                <p class="producto-card__items">Café · Aromáticas · Vasos desechables · Mezcladores · Azúcar · Servilletas</p>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#EEEDFE;color:#4A3FB5">Cafetería</span>
+                  <h3 class="producto-card__nombre" id="prod-cafeteria">Cafetería y bebidas</h3>
+                  <ul class="producto-card__lista" aria-label="Productos de cafetería">
+                    <li>Café molido y aromáticas</li>
+                    <li>Vasos desechables y vasos plásticos</li>
+                    <li>Azúcar, mezcladores y servilletas</li>
+                    <li>Platos y cubiertos desechables</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
               </article>
 
-              <article class="producto-card" role="listitem">
-                <div class="producto-card__icono" style="background:#E1F5EE" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.75" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              <article class="producto-card" role="listitem" aria-labelledby="prod-mobiliario">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#4E6A1A,#6a8f23)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="7" y1="18" x2="7" y2="22"/><line x1="17" y1="18" x2="17" y2="22"/></svg>
                 </div>
-                <h3 class="producto-card__nombre">Mantenimiento</h3>
-                <p class="producto-card__items">Soporte a impresoras · Computadores portátiles y de escritorio · Redes tecnológicas</p>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#F0F3D8;color:#4E6A1A">Mobiliario</span>
+                  <h3 class="producto-card__nombre" id="prod-mobiliario">Mobiliario de oficina</h3>
+                  <ul class="producto-card__lista" aria-label="Productos de mobiliario">
+                    <li>Sillas ergonómicas y sillas plásticas</li>
+                    <li>Escritorios y mesas de trabajo</li>
+                    <li>Archivadores y estantes</li>
+                    <li>Pizarras y tableros</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
               </article>
 
-              <div class="producto-card producto-card--extra" aria-label="Consulta por más productos">
-                <div class="producto-card__icono" style="background:transparent" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              <article class="producto-card" role="listitem" aria-labelledby="prod-botiquin">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#9F5F2A,#c07832)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/><line x1="12" y1="7" x2="12" y2="17"/><line x1="7" y1="12" x2="17" y2="12"/></svg>
                 </div>
-                <p class="producto-card__nombre" style="color:var(--texto-sec)">¿No encuentras lo que buscas?</p>
-                <p class="producto-card__items">Pregúntanos — tenemos muchos más productos disponibles para tu organización.</p>
-              </div>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#F7E8D8;color:#9F5F2A">Botiquín</span>
+                  <h3 class="producto-card__nombre" id="prod-botiquin">Botiquín y primeros auxilios</h3>
+                  <ul class="producto-card__lista" aria-label="Productos de botiquín">
+                    <li>Alcohol antiséptico y gasas</li>
+                    <li>Vendas y esparadrapo</li>
+                    <li>Guantes de látex y mascarillas</li>
+                    <li>Termómetros y kit completo</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
+              </article>
             </div>
-          </div>
+
+            <!-- Slide 3: Terceras 3 -->
+            <div class="productos__slide" role="group">
+              <article class="producto-card" role="listitem" aria-labelledby="prod-ferreteria">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#6B4FAA,#8b6ec9)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 20h16"/><path d="M6 4l4 4"/><path d="M14 10l4-4"/><path d="M7 7l10 10"/></svg>
+                </div>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#EEE9FD;color:#6B4FAA">Ferretería</span>
+                  <h3 class="producto-card__nombre" id="prod-ferreteria">Ferretería básica</h3>
+                  <ul class="producto-card__lista" aria-label="Productos de ferretería">
+                    <li>Clavos, tornillos y puntillas</li>
+                    <li>Cerraduras y chapas</li>
+                    <li>Cinta métrica y nivel</li>
+                    <li>Herramientas de mano básicas</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
+              </article>
+
+              <article class="producto-card" role="listitem" aria-labelledby="prod-consumibles">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#0F4D7A,#1669a8)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>
+                </div>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#DDE9F4;color:#0F4D7A">Impresión</span>
+                  <h3 class="producto-card__nombre" id="prod-consumibles">Consumibles de impresión</h3>
+                  <ul class="producto-card__lista" aria-label="Consumibles de impresión">
+                    <li>Papel bond y papel couché</li>
+                    <li>Etiquetas y stickers</li>
+                    <li>Cintas y ribbons para impresoras</li>
+                    <li>Folders y archivos especiales</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
+              </article>
+
+              <article class="producto-card" role="listitem" aria-labelledby="prod-mantenimiento">
+                <div class="producto-card__cabecera" style="background:linear-gradient(135deg,#0A5E47,#0d7d60)">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <div class="producto-card__cuerpo">
+                  <span class="producto-card__badge" style="background:#E1F5EE;color:#0A5E47">Mantenimiento</span>
+                  <h3 class="producto-card__nombre" id="prod-mantenimiento">Mantenimiento tecnológico</h3>
+                  <ul class="producto-card__lista" aria-label="Servicios de mantenimiento">
+                    <li>Soporte y reparación de impresoras</li>
+                    <li>Mantenimiento de computadores</li>
+                    <li>Instalación de redes tecnológicas</li>
+                    <li>Asesoría y diagnóstico técnico</li>
+                  </ul>
+                  <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
+                </div>
+              </article>
+            </div>
+
 
           <!-- Controles -->
           <div class="productos__controles">
@@ -327,60 +524,41 @@
           <h2 class="seccion__titulo" id="sectores-titulo">Sectores que atendemos</h2>
           <p class="seccion__sub">Cualquier organización que compre en volumen es nuestro cliente</p>
         </div>
-        <div class="sectores__carrusel" role="region" aria-label="Carrusel de sectores" aria-live="polite">
-          <ul class="sectores__track" id="sectores-track" role="list">
-            <!-- Slide 1: Primeros 4 sectores -->
-            <li class="sectores__slide" role="group">
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-                Instituciones educativas
-              </div>
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                Clínicas y salud
-              </div>
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><rect x="9" y="12" width="6" height="9"/></svg>
-                Comercio y retail
-              </div>
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>
-                Restaurantes y hoteles
-              </div>
-            </li>
-
-            <!-- Slide 2: Siguientes 4 sectores -->
-            <li class="sectores__slide" role="group">
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                Empresas privadas
-              </div>
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                Cooperativas
-              </div>
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Entidades jurídicas
-              </div>
-              <div class="sector-tag" role="listitem">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-                Y muchos más
-              </div>
-            </li>
-          </ul>
-
-          <!-- Controles -->
-          <div class="sectores__controles">
-            <button class="sectores__btn" id="sect-prev" aria-label="Grupo anterior de sectores">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <div class="sectores__dots" id="sectores-dots" role="tablist" aria-label="Seleccionar grupo de sectores"></div>
-            <button class="sectores__btn" id="sect-next" aria-label="Siguiente grupo de sectores">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-          </div>
-        </div>
+        <!-- Grid responsivo — 4 col escritorio, 2 tablet, 2 móvil -->
+        <ul class="sectores__grid" role="list" aria-label="Sectores que atendemos">
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Instituciones educativas
+          </li>
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Clínicas y salud
+          </li>
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><rect x="9" y="12" width="6" height="9"/></svg>
+            Comercio y retail
+          </li>
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>
+            Restaurantes y hoteles
+          </li>
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            Empresas privadas
+          </li>
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            Cooperativas
+          </li>
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Entidades jurídicas
+          </li>
+          <li class="sector-tag" role="listitem">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Y muchos más
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -480,6 +658,27 @@
         </div>
       </div>
     </section>
+
+     <!-- BANDA CTA -->
+    <div class="cta-banda" role="complementary" aria-label="Llamada a la acción">
+      <div class="cta-banda__inner">
+        <div>
+          <h2>¿Listo para cotizar?</h2>
+          <p>Escríbenos ahora — te respondemos de inmediato</p>
+        </div>
+        <div class="cta-banda__btns">
+          <a href="https://wa.me/573106764906?text=Hola%2C%20quiero%20cotizar%20con%20J%26O%20Suministros"
+             class="btn btn--wa"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Escribir al WhatsApp — abre en nueva pestaña">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Escribir al WhatsApp
+          </a>
+          <a href="mailto:josuministrosmonteria@gmail.com" class="btn btn--blanco">Enviar correo</a>
+        </div>
+      </div>
+    </div>
 
     <!-- CONTACTO -->
     <section id="contacto" class="seccion" aria-labelledby="contacto-titulo">
@@ -609,6 +808,23 @@
               <span class="form__error" id="error-mensaje" role="alert">El mensaje debe tener al menos 10 caracteres.</span>
             </div>
 
+            <div class="form__grupo form__grupo--check" id="grupo-politica">
+              <label class="form__check-label" for="acepta-politica">
+                <input type="checkbox" id="acepta-politica" name="acepta-politica"
+                       required aria-required="true"
+                       aria-describedby="error-politica" />
+                <span>He leído y acepto la
+                  <a href="politica-privacidad.html" target="_blank" rel="noopener noreferrer"
+                     aria-label="Ver política de privacidad y tratamiento de datos — abre en nueva pestaña">
+                    Política de privacidad y tratamiento de datos personales
+                  </a>
+                  de J&amp;O Suministros, conforme a la Ley 1581 de 2012.
+                  <span aria-hidden="true" class="form__required">*</span>
+                </span>
+              </label>
+              <span class="form__error" id="error-politica" role="alert">Debes aceptar la política de privacidad para continuar.</span>
+            </div>
+
             <p class="form__aviso form__nota">
               <span aria-hidden="true" class="form__required">*</span> Campos obligatorios
             </p>
@@ -624,26 +840,7 @@
       </div>
     </section>
 
-    <!-- BANDA CTA -->
-    <div class="cta-banda" role="complementary" aria-label="Llamada a la acción">
-      <div class="cta-banda__inner">
-        <div>
-          <h2>¿Listo para cotizar?</h2>
-          <p>Escríbenos ahora — te respondemos de inmediato</p>
-        </div>
-        <div class="cta-banda__btns">
-          <a href="https://wa.me/573106764906?text=Hola%2C%20quiero%20cotizar%20con%20J%26O%20Suministros"
-             class="btn btn--wa"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Escribir al WhatsApp — abre en nueva pestaña">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribir al WhatsApp
-          </a>
-          <a href="mailto:josuministrosmonteria@gmail.com" class="btn btn--blanco">Enviar correo</a>
-        </div>
-      </div>
-    </div>
+   
 
   </main>
 
@@ -655,7 +852,7 @@
           <div class="footer__logo-box" aria-hidden="true">J&amp;O</div>
           <span class="footer__logo-nombre">J&amp;O Suministros</span>
         </div>
-        <p class="footer__desc">Proveedor institucional de papelería, tecnología, aseo, cafetería y mantenimiento en Montería, Córdoba.</p>
+        <p class="footer__desc">Proveedor institucional de papelería, tecnología, aseo, cafetería, mobiliario, botiquín, ferretería, consumibles de impresión y mantenimiento en Montería, Córdoba.</p>
         <p class="footer__desc" style="margin-top:.375rem">NIT: 1067842605-3 · Régimen Simplificado</p>
         <div class="footer__social" aria-label="Redes sociales">
           <a href="https://wa.me/573106764906" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp — abre en nueva pestaña">
@@ -680,11 +877,15 @@
 
       <div class="footer__col">
         <h3>Líneas de producto</h3>
-        <ul class="footer__lista" role="list">
+        <ul class="footer__lista footer__lista--columnas" role="list">
           <li><a href="#productos">Papelería</a></li>
           <li><a href="#productos">Tecnología</a></li>
           <li><a href="#productos">Aseo</a></li>
           <li><a href="#productos">Cafetería</a></li>
+          <li><a href="#productos">Mobiliario</a></li>
+          <li><a href="#productos">Botiquín</a></li>
+          <li><a href="#productos">Ferretería</a></li>
+          <li><a href="#productos">Consumibles de impresión</a></li>
           <li><a href="#productos">Mantenimiento</a></li>
         </ul>
       </div>
