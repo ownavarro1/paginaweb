@@ -69,8 +69,11 @@
         "closes": "18:00"
       }
     ],
-    "hasMap": "https://www.google.com/maps?q=8.738424,-75.877440",
-    "sameAs": ["https://wa.me/573106764906"],
+    "hasMap": "https://www.google.com/maps/place/Papeleria+Suministros+Insumos+JO/@8.7382862,-75.8774717,1299m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8e5a3119b08d1f49:0xcd48c528379826a9!8m2!3d8.7382862!4d-75.8774717!16s%2Fg%2F11g1mm7cb8",
+    "sameAs": [
+      "https://wa.me/573106764906",
+      "https://www.google.com/maps/place/Papeleria+Suministros+Insumos+JO/@8.7382862,-75.8774717,1299m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8e5a3119b08d1f49:0xcd48c528379826a9!8m2!3d8.7382862!4d-75.8774717!16s%2Fg%2F11g1mm7cb8"
+    ],
     "priceRange": "$$",
     "currenciesAccepted": "COP",
     "paymentAccepted": "Cash, Check, Bank Transfer",
@@ -558,9 +561,8 @@
                   <a href="#contacto" class="producto-card__btn">Cotizar ahora →</a>
                 </div>
               </article>
-            </div>
+          </div>
 
-      
           <!-- Controles -->
           <div class="productos__controles">
             <button class="productos__btn" id="prod-prev" aria-label="Línea anterior">
@@ -652,26 +654,6 @@
       </div>
     </section>
 
-    <!-- CTA MITAD DE PÁGINA -->
-    <div class="cta-medio" role="complementary" aria-label="Cotizar ahora">
-      <div class="cta-medio__inner contenedor">
-        <div class="cta-medio__texto">
-          <p class="cta-medio__pregunta">¿Ya sabes qué necesitas?</p>
-          <p class="cta-medio__sub">Escríbenos ahora y te respondemos en minutos con precios y disponibilidad.</p>
-        </div>
-        <div class="cta-medio__btns">
-          <a href="https://wa.me/573106764906?text=Hola%2C%20quiero%20cotizar%20con%20J%26O%20Suministros"
-             class="btn btn--wa"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Cotizar por WhatsApp — abre en nueva pestaña">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Cotizar por WhatsApp
-          </a>
-          <a href="#contacto" class="btn btn--primario">Ver formulario de contacto</a>
-        </div>
-      </div>
-    </div>
-
     <!-- NOSOTROS / POR QUÉ ELEGIRNOS -->
     <section id="nosotros" class="seccion seccion--gris" aria-labelledby="ventajas-titulo">
       <div class="contenedor">
@@ -719,25 +701,159 @@
 
         </div>
 
-        <!-- Clientes -->
+        <!-- Clientes en tarjetas visuales -->
         <div class="clientes__subseccion">
           <div class="clientes__cabecera">
             <h3 class="clientes__titulo">Organizaciones que han confiado en nosotros</h3>
-            <p class="clientes__nota">Hemos trabajado con instituciones educativas, cooperativas y entidades públicas que confían en nuestro servicio puntual y transparente.</p>
+            <p class="clientes__nota">Instituciones educativas, cooperativas y entidades públicas que confían en nuestro servicio puntual y transparente.</p>
           </div>
-          <ul class="clientes__lista" role="list">
-            <li class="cliente-tag" role="listitem">IE Santa María</li>
-            <li class="cliente-tag" role="listitem">IE Policarpa Salavarrieta</li>
-            <li class="cliente-tag" role="listitem">IE Pata de Plátano</li>
-            <li class="cliente-tag" role="listitem">IE San José de Canalete</li>
-            <li class="cliente-tag" role="listitem">Cooperativa de Educadores de Córdoba</li>
-            <li class="cliente-tag" role="listitem">Rama Judicial – Consejo Superior de la Judicatura</li>
+          <ul class="clientes__grid" role="list">
+            <li class="cliente-card" role="listitem">
+              <div class="cliente-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div>
+                <p class="cliente-card__nombre">IE Santa María</p>
+                <p class="cliente-card__tipo">Institución educativa</p>
+              </div>
+            </li>
+            <li class="cliente-card" role="listitem">
+              <div class="cliente-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div>
+                <p class="cliente-card__nombre">IE Policarpa Salavarrieta</p>
+                <p class="cliente-card__tipo">Institución educativa</p>
+              </div>
+            </li>
+            <li class="cliente-card" role="listitem">
+              <div class="cliente-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div>
+                <p class="cliente-card__nombre">IE Pata de Plátano</p>
+                <p class="cliente-card__tipo">Institución educativa</p>
+              </div>
+            </li>
+            <li class="cliente-card" role="listitem">
+              <div class="cliente-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div>
+                <p class="cliente-card__nombre">IE San José de Canalete</p>
+                <p class="cliente-card__tipo">Institución educativa</p>
+              </div>
+            </li>
+            <li class="cliente-card" role="listitem">
+              <div class="cliente-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div>
+                <p class="cliente-card__nombre">Cooperativa de Educadores de Córdoba</p>
+                <p class="cliente-card__tipo">Cooperativa</p>
+              </div>
+            </li>
+            <li class="cliente-card" role="listitem">
+              <div class="cliente-card__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <p class="cliente-card__nombre">Rama Judicial – Consejo Superior de la Judicatura</p>
+                <p class="cliente-card__tipo">Entidad pública</p>
+              </div>
+            </li>
           </ul>
         </div>
+
       </div>
     </section>
 
-    
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="seccion seccion--gris" aria-labelledby="testimonios-titulo">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2 class="seccion__titulo" id="testimonios-titulo">Lo que dicen nuestros clientes</h2>
+          <p class="seccion__sub">Experiencias reales de organizaciones que trabajan con nosotros</p>
+        </div>
+        <div class="testimonios__grid" role="list">
+
+          <article class="testimonio-card" role="listitem">
+            <div class="testimonio-card__estrellas" aria-label="5 estrellas">
+              ★★★★★
+            </div>
+            <blockquote class="testimonio-card__texto">
+              "Excelente servicio, siempre puntuales con las entregas y los precios son muy competitivos. Los recomendamos ampliamente para suministros institucionales."
+            </blockquote>
+            <footer class="testimonio-card__autor">
+              <div class="testimonio-card__avatar" aria-hidden="true">IE</div>
+              <div>
+                <p class="testimonio-card__nombre">IE Santa María</p>
+                <p class="testimonio-card__cargo">Institución Educativa · Montería</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonio-card" role="listitem">
+            <div class="testimonio-card__estrellas" aria-label="5 estrellas">
+              ★★★★★
+            </div>
+            <blockquote class="testimonio-card__texto">
+              "Llevamos varios años trabajando con J&O Suministros. La atención es personalizada, responden rápido por WhatsApp y siempre tienen lo que necesitamos."
+            </blockquote>
+            <footer class="testimonio-card__autor">
+              <div class="testimonio-card__avatar" aria-hidden="true">CE</div>
+              <div>
+                <p class="testimonio-card__nombre">Cooperativa de Educadores de Córdoba</p>
+                <p class="testimonio-card__cargo">Cooperativa · Córdoba</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonio-card" role="listitem">
+            <div class="testimonio-card__estrellas" aria-label="5 estrellas">
+              ★★★★★
+            </div>
+            <blockquote class="testimonio-card__texto">
+              "Cumplimiento total en documentación para contratación pública. Nos han suministrado papelería y tecnología con calidad garantizada."
+            </blockquote>
+            <footer class="testimonio-card__autor">
+              <div class="testimonio-card__avatar" aria-hidden="true">RJ</div>
+              <div>
+                <p class="testimonio-card__nombre">Rama Judicial</p>
+                <p class="testimonio-card__cargo">Consejo Superior de la Judicatura · Córdoba</p>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+        <p class="testimonios__nota">
+          <a href="https://www.google.com/maps/place/Papeleria+Suministros+Insumos+JO/@8.7382862,-75.8774717,1299m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8e5a3119b08d1f49:0xcd48c528379826a9!8m2!3d8.7382862!4d-75.8774717!16s%2Fg%2F11g1mm7cb8" target="_blank" rel="noopener noreferrer">
+            Ver más reseñas en Google Maps →
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA MITAD DE PÁGINA -->
+    <div class="cta-medio" role="complementary" aria-label="Cotizar ahora">
+      <div class="cta-medio__inner contenedor">
+        <div class="cta-medio__texto">
+          <p class="cta-medio__pregunta">¿Ya sabes qué necesitas?</p>
+          <p class="cta-medio__sub">Escríbenos ahora y te respondemos en minutos con precios y disponibilidad.</p>
+        </div>
+        <div class="cta-medio__btns">
+          <a href="https://wa.me/573106764906?text=Hola%2C%20quiero%20cotizar%20con%20J%26O%20Suministros"
+             class="btn btn--wa"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Cotizar por WhatsApp — abre en nueva pestaña">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a href="#contacto" class="btn btn--primario">Ver formulario de contacto</a>
+        </div>
+      </div>
+    </div>
+
     <!-- CONTACTO -->
     <section id="contacto" class="seccion" aria-labelledby="contacto-titulo">
       <div class="contacto__inner contenedor">
@@ -801,18 +917,18 @@
           <!-- Mapa -->
           <div class="mapa-wrap">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.5!2d-75.87744!3d8.738424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOC43Mzg0MjQsLTc1Ljg3NzQ0!5e0!3m2!1ses!2sco!4v1234567890"
-              title="Ubicación de J&O Suministros en Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0!2d-75.8774717!3d8.7382862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a3119b08d1f49%3A0xcd48c528379826a9!2sPapeleria%20Suministros%20Insumos%20JO!5e0!3m2!1ses!2sco!4v1234567890"
+              title="Ubicación de J&O Suministros — Papeleria Suministros Insumos JO en Google Maps"
               allowfullscreen
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               aria-label="Mapa de ubicación: Calle 12 # 18-10, Rosales de Tacasuan, Montería"></iframe>
           </div>
-          <a href="https://www.google.com/maps?q=8.738424,-75.877440"
+          <a href="https://www.google.com/maps/place/Papeleria+Suministros+Insumos+JO/@8.7382862,-75.8774717,1299m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8e5a3119b08d1f49:0xcd48c528379826a9!8m2!3d8.7382862!4d-75.8774717!16s%2Fg%2F11g1mm7cb8"
              class="btn btn--contorno contacto__boton-mapa"
              target="_blank"
              rel="noopener noreferrer"
-             aria-label="Abrir ruta en Google Maps — abre en nueva pestaña">
+             aria-label="Ver J&O Suministros en Google Maps — abre en nueva pestaña">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Cómo llegar
           </a>
@@ -982,7 +1098,9 @@
           <li><a href="#productos">Productos</a></li>
           <li><a href="#como-funciona">¿Cómo funciona?</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <li><a href="politica-privacidad.html">Política de privacidad</a></li>
         </ul>
       </div>
 
@@ -1004,7 +1122,10 @@
 
     <div class="footer__bottom">
       <span>© <span id="anio">2025</span> J&amp;O Suministros. Todos los derechos reservados.</span>
-      <span>Calle 12 # 18-10, Rosales de Tacasuan, Montería, Córdoba</span>
+      <span>
+        <a href="politica-privacidad.html" style="color:rgba(255,255,255,.4);text-decoration:none">Política de privacidad</a>
+        &nbsp;·&nbsp; Calle 12 # 18-10, Rosales de Tacasuan, Montería, Córdoba
+      </span>
     </div>
   </footer>
 
